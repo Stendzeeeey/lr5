@@ -1,0 +1,25 @@
+Описать функцию Even(K) логического типа, возвращающую True, если целый параметр K является четным, и False в противном случае. С ее помощью найти количество четных чисел в наборе из 10 целых чисел.
+#include "pt4.h"
+#include <cmath>
+using namespace std;
+
+bool Even(int k){
+    if (k % 2 == 0) { return true; }
+    else { return false; }
+}
+
+void Solve()
+{
+    Task("Proc24");
+    int k, q = 0;
+    for (int i = 0; i <= 10; i++)
+    {
+        k = -7 + rand() % 14;
+        pt << k;
+        if (Even(k) == true)
+        {
+            q++;
+        }
+    }
+    pt << q;
+}
